@@ -106,6 +106,7 @@ jobs:
         run: docker load --input "${{ runner.temp }}/fw-builder.tar"
       - name: Build firmware
         run: |
+          git tag v2.0.0 || true
           docker run --rm -v ${PWD}:/workdir -e CURRENT_DEVICE_TYPE=${{ matrix.device_type }} "${{ needs.build_fw_builder.outputs.image_ref }}" firmware/build.sh
       - name: Upload built binaries
         uses: actions/upload-artifact@v7
