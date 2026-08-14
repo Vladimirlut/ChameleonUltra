@@ -60,7 +60,6 @@ void rgb_marquee_reset(void) {
 
 // Brightness to PWM value
 uint16_t get_pwmduty(uint8_t light_level) {
-    return;
     return PWM_MAX - (PWM_MAX * pow(((double)light_level / LIGHT_LEVEL_MAX), 2.2));
 }
 
