@@ -12,6 +12,10 @@
 #include "nrf_log_default_backends.h"
 NRF_LOG_MODULE_REGISTER();
 
+#pragma GCC diagnostic ignored "-Wunused-variable"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wunreachable-code"
+#pragma GCC diagnostic ignored "-Wunused-function"
 
 #define PWM_MAX 0 // PWM Maximum
 #define LIGHT_LEVEL_MAX 0 // The maximum value of brightness level
